@@ -1,0 +1,66 @@
+/*
+SQLyog Community v8.71 
+MySQL - 5.6.26 : Database - trentinodb
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`trentinodb` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `trentinodb`;
+
+/*Table structure for table `producto` */
+
+DROP TABLE IF EXISTS `producto`;
+
+CREATE TABLE `producto` (
+  `idproducto` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) NOT NULL,
+  `precio` double NOT NULL,
+  PRIMARY KEY (`idproducto`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+/*Data for the table `producto` */
+
+insert  into `producto`(`idproducto`,`nombre`,`precio`) values (1,'TV',800),(2,'Radio',250),(3,'Tostadora',100);
+
+/*Table structure for table `promocion` */
+
+DROP TABLE IF EXISTS `promocion`;
+
+CREATE TABLE `promocion` (
+  `idPromocion` int(11) NOT NULL AUTO_INCREMENT,
+  `nombreProm` varchar(45) NOT NULL,
+  PRIMARY KEY (`idPromocion`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+/*Data for the table `promocion` */
+
+insert  into `promocion`(`idPromocion`,`nombreProm`) values (1,'trentino'),(2,'examenparcial'),(3,'pandemia');
+
+/*Table structure for table `usuario` */
+
+DROP TABLE IF EXISTS `usuario`;
+
+CREATE TABLE `usuario` (
+  `idUsuario` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY (`idUsuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+/*Data for the table `usuario` */
+
+insert  into `usuario`(`idUsuario`,`username`,`password`) values (1,'admin','admin'),(2,'trentino','trentino');
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

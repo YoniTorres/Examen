@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="ProductoServlet">
+            <h1>Pedidos Trentino</h1>
+            <p>Producto</p>
+            <input type="text" name="nombre" required>
+             
+            <p>Cantidad</p>
+            <input type="number" name="cantidad" required><br><br>
+            
+            <p>Si cuentas con codigo por favor ingresar</p>
+            <p>codigo</p>
+            <input type="text" name="nombreProm"><br><br>
+            
+            <input type="submit" name="boton" value="Enviar">
+
+            <%-- Agregando codigo --%>
+            <div>Descargar de Archivos</div>
+            <a href="/Practica001/DescargaServlet">Descargar</a>
+
+        </form>
+    </body>
+</html>
